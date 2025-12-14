@@ -2,6 +2,7 @@
   <h2 class="mb-3">Projects</h2>
   <hr>
 
+  <!-- While site is loading display placeholder cards -->
   @if (loading()) {
   <div class="row">
     @for (item of [1, 2, 3]; track item) {
@@ -26,20 +27,27 @@
   </div>
   }
 
+  <!-- On error display red error message -->
   @if (error()) {
   <div class="alert alert-danger">{{ error() }}</div>
   }
 
+  <!-- On success load the actual cards with data from JSON file -->
   @if (!loading() && !error()) {
+  <!-- Create a flex row for displaying cards -->
   <div class="row">
+    <!-- Loop through all the projects in projects.json -->
     @for (project of projects(); track project.title) {
+    <!-- Create a card based on data that is inside the projects.json -->
     <div class="col-md-4">
       <div class="card mb-4 h-100 shadow-sm">
+        <!-- Provided image -->
         <img [src]="project.image" class="card-img-top" alt="{{ project.title }}">
-        <div class="card-body d-flex flex-column">
+        <!-- Title and description -->
+        <div class="card-body d-flex flex-column card-bg">
           <h5 class="card-title">{{ project.title }}</h5>
           <p class="card-text">{{ project.description }}</p>
-
+          <!-- Techstack tags with styling -->
           @if (project.tags?.length) {
           <div class="mt-auto d-flex gap-2 flex-wrap">
             @for (tag of project.tags; track tag) {
@@ -47,19 +55,20 @@
             }
           </div>
           }
-
+          <!-- live site and github repo link -->
           <div class="mt-3 d-flex gap-2">
             @if (project.site) {
-            <a [href]="project.site" target="_blank" rel="noopener noreferrer" class="btn btn-success">
+            <a [href]="project.site" target="_blank" rel="noopener noreferrer" class="btn btn-site">
               <i class="bi bi-globe"></i> Live Site
             </a>
             }
             @if (project.github) {
-            <a [href]="project.github" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+            <a [href]="project.github" target="_blank" rel="noopener noreferrer" class="btn btn-github">
               <i class="bi bi-github"></i> GitHub
             </a>
             }
           </div>
+          <!-- Year of completion -->
           <div class="d-flex justify-content-center p-2 card-title">
             ({{ project.year }})
           </div>
