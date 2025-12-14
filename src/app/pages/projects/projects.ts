@@ -53,10 +53,4 @@ export class Projects implements OnInit {
       }
     });
   }
-
-  // Helper function for Angular's @for loop to track items efficiently
-  // Uses the project title as a unique identifier
-  trackByTitle(_: number, p: Project) {
-    return p.title;
-  }
 }
