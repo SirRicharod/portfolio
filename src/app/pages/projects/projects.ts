@@ -9,6 +9,7 @@ interface Project {
   tags?: string[];
   site?: string;
   github?: string;
+  year?: number;
 }
 
 @Component({

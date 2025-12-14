@@ -5,6 +5,7 @@
     "image": "assets/zodiac.png",
     "tags": ["JavaScript", "Bootstrap"],
     "site": "https://sirricharod-chinesezodiac.netlify.app",
-    "github": "https://github.com/SirRicharod/chinesezodiacs"
+    "github": "https://github.com/SirRicharod/chinesezodiacs",
+    "year": "2025"
   }
 ]

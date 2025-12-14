@@ -19,53 +19,58 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-          "styles": [
-            "src/styles.css"
-          ]
-        },
-        "configurations": {
-          "production": {
-            "budgets": [
+              "src/assets",
               {
-                "type": "initial",
-                "maximumWarning": "500kB",
-                "maximumError": "1MB"
-              },
-              {
-                "type": "anyComponentStyle",
-                "maximumWarning": "4kB",
-                "maximumError": "8kB"
+                "glob": "**/*",
+                "input": "public",
+                "output": "/"
               }
             ],
-            "outputHashing": "all"
+            "styles": [
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "src/styles.css"
+            ]
           },
-          "development": {
-            "optimization": false,
-            "extractLicenses": false,
-            "sourceMap": true
-          }
-        },
-        "defaultConfiguration": "production"
-      },
-      "serve": {
-        "builder": "@angular/build:dev-server",
-        "configurations": {
-          "production": {
-            "buildTarget": "portfolio:build:production"
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
           },
-          "development": {
-            "buildTarget": "portfolio:build:development"
-          }
+          "defaultConfiguration": "production"
         },
-        "defaultConfiguration": "development"
-      },
-      "test": {
-        "builder": "@angular/build:unit-test"
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "portfolio:build:production"
+            },
+            "development": {
+              "buildTarget": "portfolio:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test"
+        }
       }
     }
   }
-}
 }

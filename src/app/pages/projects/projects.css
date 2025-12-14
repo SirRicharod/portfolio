@@ -14,3 +14,45 @@
 .btn-dark {
   flex: 1;
 }
+
+.btn {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.card-title small {
+  font-weight: normal;
+  font-size: 0.85rem;
+  color: lightslategray;
+}
+
+.badge {
+  padding: 1px;
+  font-size: 0.75rem;
+  padding: 0.5em;
+  border-radius: 0.5rem;
+}
+
+.tag-angular {
+  background: linear-gradient(90deg, rgba(250, 46, 191, 1) 0%, rgba(248, 1, 63, 1) 50%, rgba(172, 33, 251, 1) 100%);
+  color: white;
+}
+
+.tag-bootstrap {
+  background: linear-gradient(90deg, rgba(151, 41, 255, 1) 0%, rgba(110, 17, 244, 1) 100%);
+  color: white;
+}
+
+.tag-javascript {
+  background: #f7df1e;
+  color: black;
+}
+
+/* fallback for unknown tags */
+.badge:not([class*="tag-"]) {
+  background-color: gray;
+  color: white;
+}
