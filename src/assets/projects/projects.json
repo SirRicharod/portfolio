@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Chinese Zodiac Lookup",
+    "description": "An Angular app that lets users explore their Chinese zodiac sign",
+    "image": "assets/zodiac.png",
+    "tags": ["JavaScript", "Bootstrap"],
+    "site": "https://sirricharod-chinesezodiac.netlify.app",
+    "github": "https://github.com/SirRicharod/chinesezodiacs"
+  }
+]

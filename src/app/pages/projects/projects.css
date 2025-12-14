@@ -1,0 +1,16 @@
+.card-img-top {
+  object-fit: cover;
+  height: 180px;
+}
+
+.badge {
+  font-size: 0.75rem;
+}
+
+.btn-success {
+  flex: 1;
+}
+
+.btn-dark {
+  flex: 1;
+}
