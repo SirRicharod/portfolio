@@ -3,27 +3,41 @@
     "title": "Chinese Zodiac Lookup",
     "description": "An app that lets users explore their Chinese zodiac sign",
     "image": "assets/zodiac.png",
-    "tags": ["JavaScript", "Bootstrap"],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap"
+    ],
     "site": "https://sirricharod-chinesezodiac.netlify.app",
     "github": "https://github.com/SirRicharod/chinesezodiacs",
     "year": "2025"
   },
   {
-    "title": "Weather Dashboard",
-    "description": "A responsive weather application with real-time forecasts",
-    "image": "assets/weather.png",
-    "tags": ["TypeScript", "Angular", "RxJS"],
-    "site": "https://weather-dashboard-demo.netlify.app",
-    "github": "https://github.com/SirRicharod/weather-dashboard",
-    "year": "2024"
+    "title": "Countdown Scheduler",
+    "description": "A simple app that tracks events and displays a countdown",
+    "image": "assets/scheduler.png",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap"
+    ],
+    "site": "https://sirricharod-scheduler.netlify.app",
+    "github": "https://github.com/SirRicharod/Scheduler",
+    "year": "2025"
   },
   {
-    "title": "Task Manager Pro",
-    "description": "A productivity tool for managing daily tasks and projects",
-    "image": "assets/tasks.png",
-    "tags": ["Angular", "Signals", "TailwindCSS"],
-    "site": "https://taskmanager-pro.netlify.app",
-    "github": "https://github.com/SirRicharod/task-manager",
-    "year": "2024"
+    "title": "Memory Game",
+    "description": "Simple memory game, click the matching animals!",
+    "image": "assets/memory.png",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "site": "https://sirricharod-memorygame.netlify.app",
+    "github": "https://github.com/SirRicharod/Memory-Game",
+    "year": "2025"
   }
 ]

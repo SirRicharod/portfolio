@@ -67,3 +67,13 @@
   background: #f7df1e;
   color: black;
 }
+
+.tag-html {
+  background: orangered;
+  color: white;
+}
+
+.tag-css {
+  background: #214ce5;
+  color: white;
+}
