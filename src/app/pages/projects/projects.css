@@ -36,6 +36,11 @@
   color: whitesmoke;
 }
 
+.btn-itchio {
+  background: #ff2449;
+  color: whitesmoke;
+}
+
 .card-title small {
   font-weight: normal;
   font-size: 0.85rem;
@@ -50,17 +55,15 @@
   border-radius: 0.5rem;
   /* default for when I have not setup a tag */
   background: slategray;
-  color: whitesmoke;
+  color: white;
 }
 
 .tag-angular {
   background: linear-gradient(90deg, rgba(250, 46, 191, 1) 0%, rgba(248, 1, 63, 1) 50%, rgba(172, 33, 251, 1) 100%);
-  color: white;
 }
 
 .tag-bootstrap {
   background: linear-gradient(90deg, rgba(151, 41, 255, 1) 0%, rgba(110, 17, 244, 1) 100%);
-  color: white;
 }
 
 .tag-javascript {
@@ -70,10 +73,16 @@
 
 .tag-html {
   background: orangered;
-  color: white;
 }
 
 .tag-css {
   background: #214ce5;
-  color: white;
+}
+
+.tag-unity {
+  background: black;
+}
+
+.tag-csharp {
+  background: #66217b;
 }

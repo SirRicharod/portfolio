@@ -51,7 +51,11 @@
           @if (project.tags?.length) {
           <div class="mt-auto d-flex gap-2 flex-wrap">
             @for (tag of project.tags; track tag) {
-            <span class="badge tag-{{ tag | lowercase }}">{{ tag }}</span>
+              <!-- Special case for C# tag -->
+            @if(tag.toLowerCase() == "c#"){
+            <span class="badge tag-csharp">{{ tag }}</span>}
+            @else {
+            <span class="badge tag-{{ tag.toLowerCase() }}">{{ tag }}</span>}
             }
           </div>
           }
@@ -67,12 +71,16 @@
               <i class="bi bi-github"></i> GitHub
             </a>
             }
+            @if (project.itchio) {
+            <a [href]="project.itchio" target="_blank" rel="noopener noreferrer" class="btn btn-itchio">
+              <i class="bi bi-controller"></i> itch.io
+            </a>
+            }
           </div>
           <!-- Year of completion -->
           <div class="d-flex justify-content-center p-2 card-title">
             ({{ project.year }})
           </div>
-
         </div>
       </div>
     </div>
