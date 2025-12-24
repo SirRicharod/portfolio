@@ -1,59 +1,59 @@
 # Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.2.
+A modern, accessible portfolio website built with Angular and TypeScript.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- **Standalone Components**: Utilizes Angular's standalone component architecture
+- **Signal-based State Management**: Leverages Angular signals for reactive state
+- **Accessibility First**: WCAG AA compliant with full keyboard navigation
+- **Optimized Performance**: Lazy loading and OnPush change detection
+- **Responsive Design**: Mobile-first approach with optimized images
 
-```bash
-ng serve
-```
+## Tech Stack
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Angular** v20+
+- **TypeScript** with strict mode
+- **Standalone Components** (no NgModules)
+- **Angular Signals** for state management
 
-## Code scaffolding
+## Getting Started
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Prerequisites
 
-```bash
-ng generate component component-name
-```
+- Node.js (LTS version recommended)
+- npm or yarn
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+### Installation
 
 ```bash
-ng build
+npm install
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+### Development Server
 
 ```bash
-ng test
+npm start
 ```
 
-## Running end-to-end tests
+Navigate to `http://localhost:4200/`
 
-For end-to-end (e2e) testing, run:
+### Build
 
 ```bash
-ng e2e
+npm run build
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Build artifacts will be stored in the `dist/` directory.
 
-## Additional Resources
+## Code Standards
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Strict TypeScript with type safety
+- OnPush change detection strategy
+- Reactive forms over template-driven
+- Native control flow (`@if`, `@for`, `@switch`)
+- `inject()` function for dependency injection
+
+## License
+
+MIT
