@@ -1,7 +1,13 @@
 :root {
   --navbar-height: 60px; /* adjust if your navbar grows */
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+}
 
 body {
-  padding-top: var(--navbar-height);
+    padding-top: var(--navbar-height);
 }
