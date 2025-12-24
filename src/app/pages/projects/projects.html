@@ -5,7 +5,7 @@
   <!-- While site is loading display placeholder cards -->
   @if (loading()) {
   <div class="row">
-    @for (item of [1, 2, 3]; track item) {
+    @for (item of [1, 2, 3, 4, 5, 6]; track item) {
     <div class="col-md-4">
       <div class="card mb-4 h-100 shadow-sm">
         <div class="placeholder card-img-top" style="height: 180px;"></div>
@@ -51,7 +51,7 @@
           @if (project.tags?.length) {
           <div class="mt-auto d-flex gap-2 flex-wrap">
             @for (tag of project.tags; track tag) {
-              <!-- Special case for C# tag -->
+            <!-- Special case for C# tag -->
             @if(tag.toLowerCase() == "c#"){
             <span class="badge tag-csharp">{{ tag }}</span>}
             @else {
