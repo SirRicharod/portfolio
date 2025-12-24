@@ -17,5 +17,5 @@ export class About {
     { name: 'JavaScript', percentage: '60', icon: 'fa-brands fa-js', level: 'intermediate' },
     { name: 'HTML5', percentage: '70', icon: 'fa-brands fa-html5', level: 'advanced' },
     { name: 'CSS3', percentage: '70', icon: 'fa-brands fa-css3-alt', level: 'intermediate' },
-  ];
+    ].sort((a, b) => a.name.localeCompare(b.name));
 }
