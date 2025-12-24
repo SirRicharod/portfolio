@@ -1,1 +1,24 @@
-<p>resume works!</p>
+<div class="container py-5">
+    <div class="timeline-container position-relative">
+        <div class="timeline-line"></div>
+
+        @for (item of milestones; track $index) {
+        <div class="row mb-5 justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow-sm p-4 h-100 milestone-card">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <h5 class="fw-bold mb-0">{{ item.title }}</h5>
+                            <small class="text-muted">{{ item.location }}</small>
+                        </div>
+                        <span class="badge bg-light text-primary border border-primary-subtle px-3 py-2">
+                            {{ item.date }}
+                        </span>
+                    </div>
+                    <p class="text-secondary mt-3 mb-0">{{ item.description }}</p>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>

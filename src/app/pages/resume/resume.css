@@ -1,0 +1,25 @@
+.timeline-container {
+    position: relative;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #dee2e6;
+}
+
+.milestone-card {
+    transition: all 0.3s ease-in-out;
+    background: white;
+    position: relative;
+    z-index: 2;
+}
+
+.milestone-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+}
