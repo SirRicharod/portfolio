@@ -1,4 +1,15 @@
 [
+    {
+    "title": "Debugger",
+    "description": "This game is riddled with bugs, shoot them down before they corrupt your computer!",
+    "image": "assets/debugger.png",
+    "tags": [
+      "Unity",
+      "C#"
+    ],
+    "itchio": "https://sirricharod.itch.io/debugger",
+    "year": "2022"
+  },
   {
     "title": "Hellhook",
     "description": "Vanquish demons using a magnetic hook to score big. Student group project made for an arcade controller.",
