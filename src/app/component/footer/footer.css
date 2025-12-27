@@ -1,4 +1,8 @@
+.footer {
+  background: var(--text-main);
+  color: var(--bg-main);
+}
+
 .margin-bottom {
   margin-bottom: -1px;
-  padding-bottom: env(safe-area-inset-bottom);
 }
