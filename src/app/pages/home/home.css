@@ -1,83 +1,110 @@
-body {
-margin-top: -200px;
+section {
+  height: 100vh;
+  /* Pull section up to offset body padding, then add padding back for content */
+  margin-top: calc(-1 * var(--navbar-height));
+  padding-top: var(--navbar-height);
 }
 
-.title-1 {
-    font-size: 3 rem;
-    font-weight: 700;
-    color: #333;
+.intro {
+  color: var(--text-main);
+  font-size: 2.5rem;
 }
-.title-2 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: #555;
+
+.intro-name {
+  font-weight: 700;
+  color: var(--accent-secondary);
+}
+
+.flavor {
+  font-size: 2rem;
+  color: var(--text-main);
 }
 
 .description {
-    font-size: 1.2rem;
-    color: #666;
-    line-height: 1.6;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-top: 1rem;
+}
+
+.btn {
+  border: 2px solid var(--accent-primary);
+  background-color: transparent;
+  border-radius: 0.5rem;
+  padding: 0.875rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent-primary);
+  color: var(--bg-main);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
 }
 
 .hero-section {
-  background: rgba(255, 255, 255, 0.7); /* Translucent white */
-  backdrop-filter: blur(10px);          /* Blurs the background behind it */
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 20px;
-  padding: 3rem;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 1.5rem;
+  padding: 4rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
 }
 
 .hover-underline-animation {
   display: inline-block;
   position: relative;
+  transition: all 0.3s ease;
 }
+
 .hover-underline-animation::after {
   content: '';
   position: absolute;
   width: 100%;
-  transform: scaleX(0);
-  height: 3px;
-  bottom: 3px;
+  height: 2px;
+  bottom: 0;
   left: 0;
-  border-radius: 5px;
-  background-color: #666;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+  background: linear-gradient(90deg, #FF6B6B, #FFD93D, #6BCB77, #4D96FF, #9D4EDD, #FF6B6B);
+  background-size: 200%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
+
+.hover-underline-animation:hover {
+  background: linear-gradient(90deg, #FF6B6B, #FFD93D, #6BCB77, #4D96FF, #9D4EDD, #FF6B6B);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: rainbow 3s linear infinite;
+}
+
 .hover-underline-animation:hover::after {
   transform: scaleX(1);
-  transform-origin: bottom left;
+  animation: rainbow 3s linear infinite;
 }
 
-.btn-hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-hover:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+@keyframes rainbow {
+  to { background-position: 200%; }
 }
 
 /* Make buttons full width on mobile, auto on larger screens */
 @media (max-width: 767.98px) {
-    .btn-hover {
-        width: 100% !important;
-    }
+  .btn {
+    width: 100% !important;
+  }
+
+  .hero-section {
+    padding: 2rem;
+  }
 }
 
 @media (min-width: 768px) {
-    .w-md-auto {
-        width: auto !important;
-    }
-}
-
-.floating-img {
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  .w-md-auto {
+    width: auto !important;
+  }
 }

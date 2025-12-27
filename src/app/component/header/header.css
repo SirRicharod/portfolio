@@ -1,12 +1,38 @@
+.navbar {
+  background: transparent;
+  backdrop-filter: none;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .navbar-brand {
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: #fff;
-  letter-spacing: 3px;
-  transition: color 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text-main);
+  letter-spacing: 0;
+  transition: opacity 0.3s ease;
 }
 
 .navbar-brand:hover {
-  color: #0d6efd;
+  color: var(--accent-secondary);
+}
+
+.nav-link {
+  color: var(--text-main);
+  position: relative;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  padding: 0.15rem 3rem !important;
+}
+
+.nav-item:not(:first-child) .nav-link {
+  border-left: 2px solid var(--text-main);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: var(--accent-secondary);
+  color: var(--bg-main);
 }
