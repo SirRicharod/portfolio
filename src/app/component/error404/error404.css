@@ -1,0 +1,179 @@
+.error-wrapper {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bg-main);
+    /* White Smoke */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.blob-indigo,
+.blob-rose {
+    position: absolute;
+    width: 30vw;
+    height: 30vw;
+    filter: blur(50px);
+    opacity: 0.2;
+    border-radius: 50%;
+}
+
+.blob-indigo {
+    background: var(--accent-primary);
+    top: -10%;
+    left: -10%;
+    animation: floatIndigo 10s infinite alternate ease-in-out;
+}
+
+.blob-rose {
+    background: var(--accent-secondary);
+    bottom: -10%;
+    right: -10%;
+    animation: floatRose 13s infinite alternate ease-in-out;
+}
+
+/* The "Float" Animations */
+@keyframes floatIndigo {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(10vw, 20vh) scale(1.1);
+    }
+
+    66% {
+        transform: translate(25vw, 5vh) scale(0.9);
+    }
+
+    100% {
+        transform: translate(15vw, 15vh) scale(1);
+    }
+}
+
+@keyframes floatRose {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(-20vw, -15vh) scale(1.2);
+    }
+
+    100% {
+        transform: translate(-10vw, -25vh) scale(0.8);
+    }
+}
+
+.error-card {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    max-width: 600px;
+    width: 90%;
+    animation: cardHover 5s infinite ease-in-out;
+}
+
+@keyframes cardHover {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.error-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.status-code {
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    color: #6366f1;
+}
+
+.divider {
+    width: 1px;
+    height: 20px;
+    background-color: #64748b;
+}
+
+.status-text {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+.glitch-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.error-message {
+  color: #64748b;
+  font-size: 1.2rem;
+  font-family: 'Fira Code', monospace; /* Monospace feels more 'game-engine' */
+  margin-bottom: 2.5rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Respawn Button */
+.btn-respawn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    background: #0f172a;
+    color: #f5f5f5;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-respawn:hover {
+    transform: translateY(-5px);
+    background: #6366f1;
+    box-shadow: 0 15px 30px rgba(99, 102, 241, 0.4);
+}
+
+.icon {
+    font-size: 1.2rem;
+}
+
+.dynamic-message {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.timer-text {
+  color: #64748b;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}

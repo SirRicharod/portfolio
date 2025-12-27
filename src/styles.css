@@ -1,14 +1,12 @@
 :root {
   --navbar-height: 60px;
-/* Background & Neutrals */
+  
   --bg-main: #f5f5f5; /* White Smoke */
   --neutral: #E2E8F0; /* Silver Mist */
   
-  /* Accents */
   --accent-primary: #6366F1;   /* Indigo Glow */
   --accent-secondary: #F43F5E; /* Vibrant Rose */
   
-  /* Typography */
   --text-main: #0F172A;  /* Deep Abyss */
   --text-muted: #64748B; /* Slate Grey */
 }
@@ -19,13 +17,21 @@ body {
   padding: 0;
   height: 100%;
   overflow-x: hidden;
-  /* Prevent horizontal scroll on mobile */
 }
 
 body {
   padding-top: var(--navbar-height);
   background-color: var(--bg-main);
   color: var(--text-main);
-  /* A slightly more playful, modern font */
   font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.loading-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(to right, #6366f1, #f43f5e);
+  z-index: 9999;
+  transition: width 0.3s ease;
 }

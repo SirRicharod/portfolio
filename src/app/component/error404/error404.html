@@ -1,0 +1,23 @@
+<div class="error-wrapper">
+    <div class="blob-indigo"></div>
+    <div class="blob-rose"></div>
+
+    <div class="error-card">
+        <div class="error-header">
+            <span class="status-code">404</span>
+            <div class="divider"></div>
+            <span class="status-text">Connection Lost</span>
+        </div>
+
+        <h1 class="dynamic-message">{{ activeMessage }}</h1>
+
+        <p class="timer-text">You will respawn in {{ timeLeft() }}</p>
+
+        <div class="action-area">
+            <a routerLink="/" class="btn-respawn">
+                <span class="icon">⟲</span>
+                <span class="text">RESPAWN</span>
+            </a>
+        </div>
+    </div>
+</div>
