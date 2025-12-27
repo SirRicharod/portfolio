@@ -1,7 +1,7 @@
 [
   {
     "title": "Hellhook",
-    "description": "Arcade game in which you have to vanquish demons using a magnetic hook. Student group project made for an actual arcade controller.",
+    "description": "Vanquish demons using a magnetic hook to score big. Student group project made for an arcade controller.",
     "image": "assets/hellhook.png",
     "tags": [
       "Unity",
