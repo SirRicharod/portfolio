@@ -19,19 +19,6 @@ export class Resume {
       title: 'Game Developer',
       location: 'LUCA School of Arts',
       description: 'Completed a Bachelor in Arts in Game Development, specializing in Unity and C#.'
-    },
-    // Add more milestones here!
-    {
-      date: '2019 - 2022',
-      title: 'Placeholder',
-      location: 'Placeholder Institute',
-      description: 'Placeholder description for previous experience or education milestone.'
-    },
-    {
-      date: '2016 - 2019',
-      title: 'Placeholder',
-      location: 'Placeholder Academy',
-      description: 'Placeholder description for earlier experience or education milestone.'
     }
   ];
 }

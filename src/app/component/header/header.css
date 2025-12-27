@@ -1,5 +1,5 @@
 .navbar {
-  background: transparent;
+  background: rgba(245, 245, 245, 0.75);
   backdrop-filter: blur(5px);
   padding: 2rem 0;
 }
@@ -34,4 +34,31 @@
 .nav-link.active {
   background-color: var(--accent-secondary);
   color: var(--bg-main);
+}
+
+/* Mobile menu styles */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: rgba(245, 245, 245, 0.75);
+    backdrop-filter: blur(10px);
+  }
+  
+  .nav-item:not(:first-child) .nav-link {
+    border-left: none !important;
+  }
+
+  .nav-link.active {
+    background-color: var(--accent-secondary);
+    color: var(--bg-main);
+  }
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
 }

@@ -1,5 +1,5 @@
 [
-    {
+  {
     "title": "Debugger",
     "description": "This game is riddled with bugs, shoot them down before they corrupt your computer!",
     "image": "assets/debugger.png",
@@ -30,6 +30,17 @@
       "C#"
     ],
     "itchio": "https://sirricharod.itch.io/swapper",
+    "year": "2024"
+  },
+  {
+    "title": "It Sawful, X'tra Terrible",
+    "description": "Endless runner with a chainsaw, chop down aliens by hitting their weak points! Group project with custom chainsaw controller.",
+    "image": "assets/itsawful.png",
+    "tags": [
+      "Unity",
+      "C#"
+    ],
+    "itchio": "https://pegrob.itch.io/it-sawful",
     "year": "2024"
   },
   {

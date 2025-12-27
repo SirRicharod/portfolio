@@ -3,6 +3,7 @@ section {
   /* Pull section up to offset body padding, then add padding back for content */
   margin-top: calc(-1 * var(--navbar-height));
   padding-top: var(--navbar-height);
+  overflow: hidden;
 }
 
 .intro {
@@ -93,7 +94,7 @@ section {
 }
 
 /* Make buttons full width on mobile, auto on larger screens */
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .btn {
     width: 100% !important;
   }
