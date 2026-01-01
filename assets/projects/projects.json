@@ -84,7 +84,7 @@
     "github": "https://github.com/SirRicharod/chinesezodiacs",
     "year": "2025"
   },
-    {
+  {
     "title": "Simple To Do Planner",
     "description": "Track your daily tasks with this easy planner!",
     "image": "assets/todo.png",
@@ -97,5 +97,19 @@
     "site": "https://sirricharod-todo.netlify.app",
     "github": "https://github.com/SirRicharod/todo",
     "year": "2025"
+  },
+  {
+    "title": "Resolution Capsule",
+    "description": "Write down your new years resolution, they will be revealed to you in a year! How much will you improve in a year?",
+    "image": "assets/resolutions.png",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap"
+    ],
+    "site": "https://sirricharod-resocaps.netlify.app",
+    "github": "https://github.com/SirRicharod/resolution-capsule",
+    "year": "2026"
   }
 ]
