@@ -83,5 +83,19 @@
     "site": "https://sirricharod-chinesezodiac.netlify.app",
     "github": "https://github.com/SirRicharod/chinesezodiacs",
     "year": "2025"
+  },
+    {
+    "title": "Simple To Do Planner",
+    "description": "Track your daily tasks with this easy planner!",
+    "image": "assets/todo.png",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap"
+    ],
+    "site": "https://sirricharod-todo.netlify.app",
+    "github": "https://github.com/SirRicharod/todo",
+    "year": "2025"
   }
 ]
