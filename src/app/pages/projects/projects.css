@@ -86,3 +86,21 @@
 .tag-csharp {
   background: #66217b;
 }
+
+.tag-laravel {
+  background: #f63003;
+}
+
+.tag-php {
+  background: #787cb4;
+  color: black;
+}
+
+.tag-mysql {
+  background: #4479a1;
+}
+
+.tag-jwtauth {
+  background: #787cb4;
+  color: black;
+}

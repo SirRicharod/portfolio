@@ -3,41 +3,40 @@
         <div class="col-lg-7">
             <h3 class="fw-bold mb-1">The Person Behind the Code</h3>
             <p class="lead text-primary-emphasis">
-                I'm a developer who enjoys the logic of the backend and the creativity of the frontend.
-                Whether I'm building interactive web apps in <strong>Angular</strong> or
-                designing games in <strong>Unity</strong>, I'm always looking for
-                the most efficient way to solve a problem.
-            </p>
-            <p class="text-secondary">
-                I don't just write code, I build solutions that prioritize user experience.
-                My background in game development gives me a unique perspective on
-                interactive design and UX.
+                I bridge the gap between Game Systems and Full-Stack Architecture. With a Bachelor's in Game Design and
+                a focus on Full-Stack development, I view every web application as an interactive ecosystem.<br>
+                My approach combines the rigorous logic of Laravel and C# with the reactive fluidity of Angular. Whether
+                I'm optimizing a MySQL query or polishing a UI transition, I prioritize performance and user agency. I
+                don't just build websites; I build digital experiences that are intuitive, scalable, and rewarding to
+                use.
             </p>
         </div>
         <h3 class="mb-3 mt-3">Toolbox</h3>
         <hr>
 
+        @for (category of categories; track category.title) {
         <div class="row">
-            @for (skill of skills; track skill.name) {
-            <div class="col-md-3 mb-4">
-                <div class="card h-100 border-0 shadow-sm text-center p-3 skill-card">
+            <div class="col-12"><h2>{{category.title}}</h2></div>
+        </div>
+        <div class="row g-3 mb-4">
+            @for (skill of category.skills; track skill.name) {
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="card h-100 border-0 shadow-sm text-center skill-card">
                     <div class="card-body">
-                        @if (skill.name === "C#") {
-                        <img src="{{skill.icon}}" alt="C#" class="mb-4 tag-csharp" />
+                        @if (skill.icon === null) {
+                        <img src="{{ skill.image }}" alt="{{skill.name}}" class="tag-image" />
                         }
                         @else {
-                        <i class="display-6 mb-4 tag-default"
+                        <i class="tag-default"
                             [class]="skill.icon + ' tag-' + skill.name.toLowerCase()"></i>
                         }
                         <h5 class="card-title skill">{{ skill.name }}</h5>
-                        <label for="progress" class="text-lowercase level">{{skill.level}}</label>
-                        <div class="progress" style="height: 5px;">
-                            <div class="progress-bar" role="progressbar" [style.width.%]="skill.percentage"></div>
-                        </div>
                     </div>
                 </div>
             </div>
             }
         </div>
+        <hr>
+        }
     </div>
 </div>

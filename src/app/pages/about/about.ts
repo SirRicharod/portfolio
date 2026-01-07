@@ -1,5 +1,16 @@
 import { Component } from '@angular/core';
 
+interface Skill {
+  name: string;
+  icon?: string | null;
+  image?: string;
+}
+
+interface Category {
+  title: string;
+  skills: Skill[];
+}
+
 @Component({
   selector: 'app-about',
   imports: [],
@@ -7,15 +18,40 @@ import { Component } from '@angular/core';
   styleUrl: './about.css',
 })
 export class About {
-  // about.component.ts
-  public skills = [
-    { name: 'Angular', percentage: '50', icon: 'fa-brands fa-angular', level: 'intermediate' },
-    { name: 'TypeScript', percentage: '40', icon: 'bi bi-typescript', level: 'beginner' },
-    { name: 'Bootstrap', percentage: '65', icon: 'bi-bootstrap-fill', level: 'intermediate' },
-    { name: 'Unity', percentage: '90', icon: 'fa-brands fa-unity', level: 'advanced' },
-    { name: 'C#', percentage: '80', icon: 'csharp.png', level: 'advanced' },
-    { name: 'JavaScript', percentage: '60', icon: 'fa-brands fa-js', level: 'intermediate' },
-    { name: 'HTML5', percentage: '70', icon: 'fa-brands fa-html5', level: 'advanced' },
-    { name: 'CSS3', percentage: '70', icon: 'fa-brands fa-css3-alt', level: 'intermediate' },
-    ].sort((a, b) => a.name.localeCompare(b.name));
+  public categories: Category[] = [
+    {
+      title: "Frontend",
+      skills:
+        [
+          { name: 'Angular', icon: 'fa-brands fa-angular' },
+          { name: 'TypeScript', icon: 'bi bi-typescript' },
+          { name: 'Bootstrap', icon: 'bi-bootstrap-fill' },
+
+          { name: 'JavaScript', icon: 'fa-brands fa-js' },
+          { name: 'HTML5', icon: 'fa-brands fa-html5' },
+          { name: 'CSS3', icon: 'fa-brands fa-css3-alt' },
+        ]
+    },
+    {
+      title: "Backend",
+      skills: [
+        { name: 'Laravel', icon: null, image: 'laravel.png' },
+        { name: 'PHP', icon: null, image: 'php.png' },
+
+      ]
+    },
+    {
+      title: "3D & Gaming",
+      skills: [
+        { name: 'Unity', icon: 'fa-brands fa-unity' },
+        { name: 'C#', icon: null, image: 'csharp.png' },]
+    },
+    {
+      title: "Design",
+      skills: [
+        { name: 'Affinity', icon: null, image: 'affinity.png' },
+        { name: 'Aseprite', icon: null, image: 'aseprite.png' },
+      ]
+    }
+  ]
 }

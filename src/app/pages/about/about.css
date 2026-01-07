@@ -1,6 +1,11 @@
 .skill-card {
     background: whitesmoke;
     transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(20px);
+    overflow: visible;
+    border-radius: 12px;
+    max-width: 160px;
+    margin: 0 auto;
 }
 
 .skill-card:hover {
@@ -9,33 +14,39 @@
     border: 1px solid rgba(13, 110, 253, 0.2) !important;
 }
 
+.card-body {
+    padding: 1.5rem 0.75rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    min-height: 120px;
+}
+
 .card-body i,
 .card-body img {
-    height: 4rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    height: 3rem;
+    max-height: 3rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: auto;
+    flex-shrink: 0;
 }
 
 .skill {
     font-weight: 500;
     color: #212529;
-    margin-bottom: 10px;
-}
-
-.level {
-    font-weight: bold;
-    color: #0d6efd;
-    border-radius: 10px;
-    background-color: aliceblue;
-    padding: 3px;
-    display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    text-align: center;
 }
 
 .tag-default {
     color: gray;
-    font-size: 50px;
+    font-size: 3rem;
 }
 
 .tag-angular {
@@ -43,7 +54,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 70px;
+    font-size: 3rem;
 }
 
 .tag-bootstrap {
@@ -51,25 +62,30 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-size: 3rem;
 }
 
 .tag-javascript {
     color: #f7df1e;
+    font-size: 3rem;
 }
 
 .tag-html5 {
     color: orangered;
+    font-size: 3rem;
 }
 
 .tag-css3 {
     color: #214ce5;
+    font-size: 3rem;
 }
 
 .tag-unity {
     color: black;
+    font-size: 3rem;
 }
 
-.tag-csharp {
+.tag-image {
     object-fit: contain;
 }
 
@@ -78,4 +94,15 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-size: 3rem;
+}
+
+.tag-laravel {
+    color: #ff2d20;
+    font-size: 3rem;
+}
+
+.tag-php {
+    color: #777bb4;
+    font-size: 3rem;
 }
