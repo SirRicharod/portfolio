@@ -77,18 +77,6 @@
     border-radius: 30px;
     max-width: 600px;
     width: 90%;
-    animation: cardHover 5s infinite ease-in-out;
-}
-
-@keyframes cardHover {
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-15px);
-    }
 }
 
 .error-header {

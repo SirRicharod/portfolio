@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --configuration production --base-href /portfolio/ && copy dist\\portfolio\\browser\\index.html dist\\portfolio\\browser\\404.html && npx gh-pages -d dist/portfolio/browser"
+    "deploy": "node -r dotenv/config node_modules/.bin/ng build --configuration production --base-href /portfolio/ && copy dist\\portfolio\\browser\\index.html dist\\portfolio\\browser\\404.html && node -r dotenv/config node_modules/.bin/gh-pages -d dist/portfolio/browser"
   },
   "prettier": {
     "printWidth": 100,
@@ -39,6 +39,7 @@
     "@angular/build": "^21.0.2",
     "@angular/cli": "^21.0.2",
     "@angular/compiler-cli": "^21.0.0",
+    "dotenv": "^17.2.3",
     "jsdom": "^27.1.0",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
