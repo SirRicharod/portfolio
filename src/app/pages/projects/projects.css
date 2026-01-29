@@ -1,16 +1,14 @@
 .card {
   background-color: whitesmoke;
+  transition: all 0.3s ease-in-out;
+  border: 1px transparent solid;
 }
 
 .card:hover {
-  transform: scale(1.01);
-  transition: transform 0.3s ease-in-out;
+  transform: translateY(-10px);
+  border: 1px solid var(--text-muted);
+  box-shadow: 0 0 15px #6365f14c !important;
 }
-
-.btn:hover {
-  opacity: 0.9;
-}
-
 
 .card-img-top {
   object-fit: cover;
@@ -19,10 +17,11 @@
 
 .btn {
   flex: 1;
-  transition: opacity 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
+  transform: scale(1.025);
   opacity: 0.9;
 }
 
@@ -41,10 +40,14 @@
   color: whitesmoke;
 }
 
-.card-title small {
+.card-title {
+  font-size: 1.5rem;
+}
+
+.year {
   font-weight: normal;
-  font-size: 0.85rem;
-  color: lightslategray;
+  font-size: 1rem;
+  color: lightslategray !important;
 }
 
 .badge {
@@ -69,6 +72,10 @@
 .tag-javascript {
   background: #f7df1e;
   color: black;
+}
+
+.tag-typescript {
+  background: #2f74c0;
 }
 
 .tag-html {
@@ -100,7 +107,7 @@
   background: #4479a1;
 }
 
-.tag-jwtauth {
-  background: #787cb4;
-  color: black;
+.tag-jwt-auth {
+  background: #000000;
+  color: rgb(0, 255, 247);
 }

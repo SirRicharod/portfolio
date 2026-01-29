@@ -19,6 +19,12 @@ export class Resume {
       title: 'Game Developer',
       location: 'LUCA School of Arts',
       description: 'Completed a Bachelor in Arts in Game Development, specializing in Unity and C#.'
+    },
+    {
+      date: '2019 - Present',
+      title: 'Crew Member',
+      location: "McDonalds's Genk",
+      description: 'Completed Shift Manager Course in Utrecht, NL.'
     }
   ];
 }
