@@ -32,7 +32,7 @@ section {
   border: 2px solid var(--accent-primary);
   background-color: transparent;
   border-radius: 0.5rem;
-  padding: 0.875rem 2.5rem;
+  padding: auto;
   font-size: 1rem;
   font-weight: 600;
   color: var(--accent-primary);
@@ -71,7 +71,7 @@ section {
   background: linear-gradient(90deg, #FF6B6B, #FFD93D, #6BCB77, #4D96FF, #9D4EDD, #FF6B6B);
   background-size: 200%;
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: center;
   transition: transform 0.3s ease;
 }
 
@@ -89,8 +89,30 @@ section {
   animation: rainbow 3s linear infinite;
 }
 
+.image-frame {
+  margin-left: auto;
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+  border-radius: 5%;
+  border: var(--accent-secondary) 3px solid;
+  background-image: image-set("pfp.jpg") ;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  transition: all 0.5s ease-in-out;
+}
+
+.image-frame:hover {
+  box-shadow: 0 0 20px var(--accent-primary);
+  border: var(--accent-primary) 3px solid;
+  background-size: 105%;
+}
+
 @keyframes rainbow {
-  to { background-position: 200%; }
+  to {
+    background-position: 200%;
+  }
 }
 
 /* Make buttons full width on mobile, auto on larger screens */
