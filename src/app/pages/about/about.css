@@ -1,11 +1,32 @@
+.about-me {
+    font-size: 1.2rem;
+}
+
+.about-me-container {
+    background: rgb(235, 235, 235);
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: justify;
+    margin: 15px auto;
+    color: var(--text-main);
+
+}
+
+.about-me-container h3 {
+    text-align: center;
+}
+
 .skill-card {
     background: whitesmoke;
     transition: all 0.3s ease-in-out;
     backdrop-filter: blur(20px);
     overflow: visible;
     border-radius: 12px;
-    max-width: 160px;
+    max-width: 150px;
     margin: 0 auto;
+    border: 1px solid transparent !important;
+
 }
 
 .skill-card:hover {
@@ -42,6 +63,14 @@
     margin-bottom: 0;
     font-size: 0.9rem;
     text-align: center;
+}
+
+hr {
+    margin-bottom: 3rem;
+}
+
+.category {
+    margin-bottom: -25px;
 }
 
 .tag-default {

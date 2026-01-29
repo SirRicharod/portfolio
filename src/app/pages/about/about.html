@@ -1,22 +1,23 @@
 <div class="container my-5">
     <div class="row mb-5 align-items-center">
-        <div class="col-lg-7">
+        <div class="col-lg-7 about-me-container">
             <h3 class="fw-bold mb-1">The Person Behind the Code</h3>
-            <p class="lead text-primary-emphasis">
-                I bridge the gap between Game Systems and Full-Stack Architecture. With a Bachelor's in Game Design and
-                a focus on Full-Stack development, I view every web application as an interactive ecosystem.<br>
-                My approach combines the rigorous logic of Laravel and C# with the reactive fluidity of Angular. Whether
-                I'm optimizing a MySQL query or polishing a UI transition, I prioritize performance and user agency. I
-                don't just build websites; I build digital experiences that are intuitive, scalable, and rewarding to
-                use.
+            <p class="about-me">
+                <br>
+                I've always been obsessed with how people interact with digital worlds. I started in <b>Game Design</b>, where I learned that every click should feel like a <i>reward, not a chore</i>. Today, I use that 'player-first' mindset to build web applications.
+                <br><br>
+                I believe that software <i>shouldn't</i> feel like a puzzle you have to solve. My job is to take the
+                complicated stuff happening behind the scenes and turn it into something that feels <i>natural, helpful, and easy to use</i>. I build experiences that respect your time and actually feel good to use.
             </p>
         </div>
-        <h3 class="mb-3 mt-3">Toolbox</h3>
+        <h2 class="mb-3 mt-5 text-center">My Toolbox</h2>
         <hr>
 
         @for (category of categories; track category.title) {
         <div class="row">
-            <div class="col-12"><h2>{{category.title}}</h2></div>
+            <div class="col-12 category">
+                <h3>{{category.title}}</h3>
+            </div>
         </div>
         <div class="row g-3 mb-4">
             @for (skill of category.skills; track skill.name) {
@@ -27,16 +28,17 @@
                         <img src="{{ skill.image }}" alt="{{skill.name}}" class="tag-image" />
                         }
                         @else {
-                        <i class="tag-default"
-                            [class]="skill.icon + ' tag-' + skill.name.toLowerCase()"></i>
+                        <i class="tag-default" [class]="skill.icon + ' tag-' + skill.name.toLowerCase()"></i>
                         }
                         <h5 class="card-title skill">{{ skill.name }}</h5>
                     </div>
                 </div>
             </div>
-            }
-        </div>
+        }
+    </div>
+    @if (!$last){
         <hr>
+    }
         }
     </div>
 </div>
