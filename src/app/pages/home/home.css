@@ -1,6 +1,5 @@
 section {
   height: 100vh;
-  /* Pull section up to offset body padding, then add padding back for content */
   margin-top: calc(-1 * var(--navbar-height));
   padding-top: var(--navbar-height);
   overflow: hidden;
@@ -96,9 +95,9 @@ section {
   overflow: hidden;
   border-radius: 5%;
   border: var(--accent-secondary) 3px solid;
-  background-image: image-set("pfp.jpg") ;
+  background-image: image-set("pfp.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 105%;
   background-position: bottom;
   transition: all 0.5s ease-in-out;
 }
@@ -106,7 +105,7 @@ section {
 .image-frame:hover {
   box-shadow: 0 0 20px var(--accent-primary);
   border: var(--accent-primary) 3px solid;
-  background-size: 105%;
+  background-size: 100%;
 }
 
 @keyframes rainbow {
@@ -116,17 +115,29 @@ section {
 }
 
 /* Make buttons full width on mobile, auto on larger screens */
-@media (max-width: 768px) {
+@media (max-width: 990px) {
   .btn {
     width: 100% !important;
   }
 
+  .intro {
+    font-size: 1.5rem;
+  }
+
+  .flavor {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
   .hero-section {
     padding: 2rem;
+    margin: 1rem;
+    text-align: center;
   }
-}
 
-@media (min-width: 768px) {
   .w-md-auto {
     width: auto !important;
   }

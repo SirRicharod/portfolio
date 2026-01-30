@@ -135,3 +135,18 @@ hr {
     color: #777bb4;
     font-size: 3rem;
 }
+
+@media (max-width: 990px) {
+    .about-me-container {
+        padding: 1rem;
+        margin: 1rem auto !important;
+        max-width: calc(100% - 2rem);
+    }
+     .about-me {
+        font-size: 1.1rem;
+    }
+
+    .category {
+        text-align: center;
+    }
+}
