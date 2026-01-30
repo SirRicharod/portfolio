@@ -1,20 +1,47 @@
 .about-me {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 1.5rem;
 }
 
 .about-me-container {
-    background: rgb(235, 235, 235);
-    backdrop-filter: blur(20px);
-    padding: 20px;
-    border-radius: 12px;
-    text-align: justify;
-    margin: 15px auto;
-    color: var(--text-main);
-
+    background: transparent;
+    padding: 0;
+    text-align: left;
+    margin: 0;
 }
 
 .about-me-container h3 {
     text-align: center;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #000;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #dee2e6;
+    padding: 5px;
+    border: 1px transparent solid;
+    background-image: image-set("pfp.jpg");
+    transform: translateY(-20px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    margin: 0 auto;
+}
+
+.profile-pic:hover {
+    box-shadow: 0 10px 20px rgba(13, 110, 253, 0.15) !important;
+    border: 1px solid rgba(13, 110, 253, 0.2) !important;
 }
 
 .skill-card {
@@ -142,11 +169,22 @@ hr {
         margin: 1rem auto !important;
         max-width: calc(100% - 2rem);
     }
-     .about-me {
-        font-size: 1.1rem;
+
+    .about-me {
+        font-size: 1rem;
+        text-align: center;
     }
 
     .category {
         text-align: center;
+    }
+
+    .profile-pic {
+        width: 180px;
+        height: 180px;
+        transform: none !important;
+        margin: 0.5rem auto 1rem;
+        background-position: center !important;
+        border-radius: 30%;
     }
 }

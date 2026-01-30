@@ -1,15 +1,29 @@
 <div class="container my-5">
     <div class="row mb-5 align-items-center">
-        <div class="col-lg-8 about-me-container">
-            <h3 class="fw-bold mb-1">The Person Behind the Code</h3>
-            <p class="about-me">
-                <br>
-                I'm Riccardo Giannecchini a {{age()}}year old <b>game/web developer</b> from Belgium.<br>
-                I've always been obsessed with how people interact with digital worlds. I started in <b>Game Design</b>, where I learned that every click should feel like a <i>reward, not a chore</i>. Today, I use that 'player-first' mindset to build web applications.
-                <br><br>
-                I believe that software <i>shouldn't</i> feel like a puzzle you have to solve. My job is to take the
-                complicated stuff happening behind the scenes and turn it into something that feels <i>natural, helpful, and easy to use</i>. I build experiences that respect your time and actually feel good to use.
-            </p>
+        <div class="row mb-5 align-items-center justify-content-center mt-5">
+            <div class="col-lg-4">
+                <div>
+                    <div class="profile-pic"></div>
+                </div>
+            </div>
+            <div class="col-md-7 about-me-container">
+                <p class="about-me lead">
+                    I am a software developer based in Belgium with a background in <b>game design</b> and a focus on
+                    <b>full-stack web applications</b>.
+                </p>
+                <p class="about-me">
+                    My experience in game design shaped how I approach development. I view applications through a
+                    <b>player-first lens</b>: every interaction should be intuitive, rewarding, and purposeful.
+                    In game development, you learn quickly that if a mechanic is frustrating, the player leaves.
+                    I carry those same standards over into every web application I develop.
+                </p>
+                <p class="about-me">
+                    I focus on turning complex technical requirements into <b>intuitive experiences</b>. My goal is
+                    to bridge the gap between back-end logic and front-end usability, ensuring that every part
+                    of an application works together to feel <b>helpful and efficient</b> rather than a hurdle
+                    for the user to overcome.
+                </p>
+            </div>
         </div>
 
         <h2 class="mb-3 mt-5 text-center">My Toolbox</h2>
@@ -36,11 +50,11 @@
                     </div>
                 </div>
             </div>
-        }
-    </div>
-    @if (!$last){
+            }
+        </div>
+        @if (!$last){
         <hr>
-    }
+        }
         }
     </div>
 </div>
