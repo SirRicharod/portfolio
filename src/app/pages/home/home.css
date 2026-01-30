@@ -35,8 +35,6 @@ section {
   align-items: center;
   justify-content: center;
   padding: 0.75rem 1.25rem;
-  margin: auto;
-  margin-left: -0.5rem;
   width: 220px;
   text-align: center;
   font-size: 1rem;
@@ -57,7 +55,7 @@ section {
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 1.5rem;
-  padding: 4rem;
+  padding: 3rem 4rem;
   margin: auto;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
 }
@@ -66,6 +64,23 @@ section {
   display: inline-block;
   position: relative;
   transition: all 0.3s ease;
+}
+
+.animate-rainbow,
+.animate-rainbow::after {
+  background: linear-gradient(90deg, #FF6B6B, #FFD93D, #6BCB77, #4D96FF, #9D4EDD, #FF6B6B);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  /* Play for 2 seconds, then stop and stay at the end state */
+  animation: rainbow 3s linear infinite;
+}
+
+/* Ensure the underline shows up during the animation */
+.animate-rainbow::after {
+  transform: scaleX(1) !important;
 }
 
 .hover-underline-animation::after {
@@ -88,12 +103,12 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: rainbow 3s linear infinite;
+  animation: rainbow 3s linear 3 forwards;
 }
 
 .hover-underline-animation:hover::after {
   transform: scaleX(1);
-  animation: rainbow 3s linear infinite;
+  animation: rainbow 3s linear 3 forwards;
 }
 
 .image-frame {
@@ -114,6 +129,30 @@ section {
   box-shadow: 0 10px 20px rgba(13, 110, 253, 0.15) !important;
   border: 3px solid rgba(13, 110, 253, 1) !important;
   background-size: 100%;
+}
+
+.social-box {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  color: var(--accent-secondary);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.social-box:hover {
+  transform: translateY(-5px);
+  background: var(--accent-secondary);
+  color: var(--bg-main);
+  box-shadow: 0 10px 20px rgba(253, 13, 89, 0.3) !important;
+  border: 1px solid var(--accent-secondary) !important;
 }
 
 @keyframes rainbow {
@@ -146,6 +185,12 @@ section {
     padding: 2rem;
     margin: 1rem;
     text-align: center;
+  }
+
+  .social-box {
+    width: 45px;
+    height: 45px;
+    font-size: 1.25rem;
   }
 
   .w-md-auto {

@@ -9,7 +9,8 @@
                     <br>
                     <span class="flavor">
                         I build
-                        <span class="hover-underline-animation">digital experiences.</span>
+                        <span class="hover-underline-animation" (mouseenter)="triggerRainbow($event)">digital
+                            experiences.</span>
                     </span>
 
                     <p class="mb-4 description">
@@ -19,11 +20,11 @@
 
                 <div class="mt-4">
                     <div class="d-flex flex-column justify-content-start gap-3 mt-4">
-                        <div class="d-flex gap-3 w-100 h-auto">
+                        <div class="d-flex gap-3 h-auto">
                             <a routerLink="/projects" class="btn btn-lg text-center">Explore my work</a>
                             <a routerLink="/about" class="btn btn-lg text-center">Get to know me</a>
                         </div>
-                        <div class="d-flex gap-3 w-100 h-auto">
+                        <div class="d-flex gap-3 h-auto">
                             <a routerLink="/resume" class="btn btn-lg text-center">Check out my resume</a>
                             <a routerLink="/contact" class="btn btn-lg text-center">Get in touch</a>
                         </div>
@@ -35,7 +36,15 @@
                 <div class="image-frame">
                 </div>
             </div>
-
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="container d-flex flex-column justify-content-center mt-5">
+                <div class="d-flex justify-content-center gap-3">
+                    @for (social of socials; track social.name) {
+                    <a [href]="social.url" target="social.name === 'Email' ? '_self' : '_blank'" class="social-box" [title]="social.name"><i [class]="social.icon"></i></a>
+                    }
+                </div>
+            </div>
         </div>
     </div>
 </section>
