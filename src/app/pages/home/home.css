@@ -31,7 +31,14 @@ section {
   border: 2px solid var(--accent-primary);
   background-color: transparent;
   border-radius: 0.5rem;
-  padding: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  margin: auto;
+  margin-left: -0.5rem;
+  width: 220px;
+  text-align: center;
   font-size: 1rem;
   font-weight: 600;
   color: var(--accent-primary);
@@ -51,6 +58,7 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 1.5rem;
   padding: 4rem;
+  margin: auto;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
 }
 
@@ -103,8 +111,8 @@ section {
 }
 
 .image-frame:hover {
-  box-shadow: 0 0 20px var(--accent-primary);
-  border: var(--accent-primary) 3px solid;
+  box-shadow: 0 10px 20px rgba(13, 110, 253, 0.15) !important;
+  border: 3px solid rgba(13, 110, 253, 1) !important;
   background-size: 100%;
 }
 
@@ -118,6 +126,8 @@ section {
 @media (max-width: 990px) {
   .btn {
     width: 100% !important;
+    height: 75px;
+    font-size: 0.9rem;
   }
 
   .intro {
