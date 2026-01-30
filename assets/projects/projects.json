@@ -114,18 +114,33 @@
   },
   {
     "title": "SideQuest",
-    "description": "A cross-disciplinary collaboration platform for students.",
+    "description": "A cross-disciplinary collaboration platform for students, by students.",
     "image": "assets/sidequest.png",
     "tags": [
       "Angular",
       "Bootstrap",
       "Laravel",
       "MySQL",
-      "JWT Auth",
+      "JWT-Auth",
       "PHP"
     ],
     "site": "",
     "github": "https://github.com/SirRicharod/mergemages-sidequest",
+    "year": "2026"
+  },
+  {
+    "title": "Kanjichou",
+    "description": "Study Japanese kanji with Kanjichou",
+    "image": "assets/kanjichou.png",
+    "tags": [
+      "Angular",
+      "Bootstrap",
+      "HTML",
+      "CSS",
+      "TypeScript"
+    ],
+    "site": "https://kanjichou.netlify.app",
+    "github": "https://github.com/SirRicharod/kanjichou",
     "year": "2026"
   }
 ]
