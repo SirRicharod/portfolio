@@ -196,4 +196,12 @@ section {
   .w-md-auto {
     width: auto !important;
   }
+
+  .container {
+    margin-top: -8rem;
+  }
+
+  .social-container {
+    margin-top: -2rem;
+  }
 }
