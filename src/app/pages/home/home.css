@@ -73,12 +73,9 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-
-  /* Play for 2 seconds, then stop and stay at the end state */
   animation: rainbow 3s linear infinite;
 }
 
-/* Ensure the underline shows up during the animation */
 .animate-rainbow::after {
   transform: scaleX(1) !important;
 }
@@ -111,24 +108,16 @@ section {
   animation: rainbow 3s linear 3 forwards;
 }
 
-.image-frame {
-  margin-left: auto;
-  height: 400px;
-  width: 400px;
-  overflow: hidden;
-  border-radius: 5%;
-  border: var(--accent-secondary) 3px solid;
-  background-image: image-set("pfp.jpg");
-  background-repeat: no-repeat;
-  background-size: 105%;
-  background-position: bottom;
-  transition: all 0.5s ease-in-out;
+.image {
+  margin-left: -5rem;
+  width: 700px;
+  height: auto;
+  filter: grayscale(1) drop-shadow(0 0 0.1rem rgba(220, 20, 60, 0));
+  transition: filter 0.5s ease-in-out;
 }
 
-.image-frame:hover {
-  box-shadow: 0 10px 20px rgba(13, 110, 253, 0.15) !important;
-  border: 3px solid rgba(13, 110, 253, 1) !important;
-  background-size: 100%;
+.image:hover {
+  filter: grayscale(0) drop-shadow(0 0 0.3rem rgba(20, 97, 220, 0.5));
 }
 
 .social-box {
@@ -161,11 +150,30 @@ section {
   }
 }
 
-/* Make buttons full width on mobile, auto on larger screens */
-@media (max-width: 990px) {
+/* Bootstrap-like breakpoint scaffolding in descending (xxl -> sm) order */
+
+/* xxl: below 1400px (scaffold) */
+@media (max-width:1400px) {
+  .image {
+    width: 550px;
+    margin-left: 0;
+
+  }
+}
+
+/* xl: below 1200px (scaffold) */
+@media (max-width:1200px) {
+  .image {
+    width: 450px;
+    margin-left: 0;
+  }
+}
+
+/* lg: below 992px */
+@media (max-width:992px) {
   .btn {
     width: 100% !important;
-    height: 75px;
+    height: 50px;
     font-size: 0.9rem;
   }
 
@@ -203,5 +211,29 @@ section {
 
   .social-container {
     margin-top: -2rem;
+  }
+
+  .image {
+    margin-top: 1rem;
+    width: 400px;
+    margin-left: 0;
+  }
+}
+
+/* md: below 768px (scaffold) */
+@media (max-width:768px) {
+  .image {
+    margin-top: 2rem;
+    width: 350px;
+    margin-left: 0;
+  }
+}
+
+/* sm: below 576px (scaffold) */
+@media (max-width:576px) {
+  .image {
+    margin-top: 2rem;
+    width: 300px;
+    margin-left: 0;
   }
 }

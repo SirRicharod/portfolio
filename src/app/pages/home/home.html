@@ -32,16 +32,16 @@
                 </div>
 
             </div>
-            <div class="col-lg-6 d-none d-lg-block d-flex ps-lg-5">
-                <div class="image-frame">
-                </div>
+            <div class="col-lg-6">
+                <img src="hero.png" alt="hero banner" class="image">
             </div>
         </div>
         <div class="d-flex align-items-center social-container">
             <div class="container d-flex flex-column justify-content-center mt-5">
                 <div class="d-flex justify-content-center gap-3">
                     @for (social of socials; track social.name) {
-                    <a [href]="social.url" target="social.name === 'Email' ? '_self' : '_blank'" class="social-box" [title]="social.name"><i [class]="social.icon"></i></a>
+                    <a [href]="social.url" target="social.name === 'Email' ? '_self' : '_blank'" class="social-box"
+                        [title]="social.name"><i [class]="social.icon"></i></a>
                     }
                 </div>
             </div>
