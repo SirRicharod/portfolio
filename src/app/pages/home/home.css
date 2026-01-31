@@ -225,15 +225,34 @@ section {
   .image {
     margin-top: 2rem;
     width: 350px;
-    margin-left: 0;
+    margin-left: -2rem;
+  }
+
+  .hero-section {
+    margin-top: 5rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+
   }
 }
 
 /* sm: below 576px (scaffold) */
 @media (max-width:576px) {
+
+  .hero-section {
+    margin-top: 5rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+
+  }
+
   .image {
     margin-top: 2rem;
     width: 300px;
-    margin-left: 0;
+    margin-left: -2rem;
   }
 }
