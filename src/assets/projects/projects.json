@@ -142,5 +142,19 @@
     "site": "https://kanjichou.netlify.app",
     "github": "https://github.com/SirRicharod/kanjichou",
     "year": "2026"
+  },
+  {
+    "title": "Pomodoro Timer",
+    "description": "Focus on your tasks with this pomodoro timer.",
+    "image": "assets/pomodoro.png",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap"
+    ],
+    "site": "https://sirricharod-pomodoro.netlify.app",
+    "github": "https://github.com/SirRicharod/Pomodoro",
+    "year": "2026"
   }
 ]
