@@ -156,5 +156,18 @@
     "site": "https://sirricharod-pomodoro.netlify.app",
     "github": "https://github.com/SirRicharod/Pomodoro",
     "year": "2026"
+  },
+  {
+    "title": "The Unlucky Coin",
+    "description": "A minor inconvenience for someone who truly deserves it.",
+    "image": "assets/unluckycoin.png",
+    "tags": [
+      "PHP",
+      "CSS",
+      "Bootstrap"
+    ],
+    "site": "https://productionserver.be/theunluckycoin/",
+    "github": "https://github.com/SirRicharod/TheUnluckyCoin",
+    "year": "2026"
   }
 ]
